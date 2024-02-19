@@ -7,7 +7,11 @@ export default function SearchResults() {
             <header>
                 <h2>Search Results</h2>
             </header>
-            <Track tracktitle="Song 2" trackartist="Artist 2" buttontype="+"/>
+            <Track 
+            tracktitle="Song 2" 
+            trackartist="Artist 2" 
+            buttontype="+"
+            />
         </div>
     )
 }
