@@ -1,4 +1,5 @@
 import React from "react"
+import "./Track.css"
 
 export default function Track(props) {
     return (
