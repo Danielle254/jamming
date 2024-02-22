@@ -4,16 +4,24 @@ import SearchBar from "./components/SearchBar/SearchBar"
 import SearchResults from "./components/SearchResults/SearchResults"
 import Playlist from "./components/Playlist/Playlist"
 import Track from './components/Track/Track.js'
-import data from "./data.js"
+import dataset from "./data.js"
 
 
 function App() {
   
 
-  /* function RemoveFromList() {
-
-  } */
+  const [data, setData] = useState(dataset)
   
+  function Shift(array) {
+    const newArray = [...array]
+    newArray.shift()
+    return newArray;
+  }
+
+  function RemoveItem() {
+    setData(prevData => Shift(prevData))
+  }
+
   const tracks = data.map(
     track => {
         return (
@@ -23,7 +31,7 @@ function App() {
               title={track.name}
               artist={track.artist}
               album={track.album}
-              /* onClick={RemoveFromList} */
+              
             />
             
         )
@@ -39,6 +47,7 @@ function App() {
       <SearchResults />
       <Playlist />
       </div>
+      <button onClick={RemoveItem} >Remove Item</button>
       {tracks}
     </div>
   );
