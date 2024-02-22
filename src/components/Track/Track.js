@@ -1,13 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Track.css"
 
 export default function Track(props) {
+    const [buttonValue, setButtonValue] = useState(true)
+
+    function ChangeButton() {
+        setButtonValue(prevButtonValue => !prevButtonValue)
+    }
+    
+    
     return (
         <div className="track">
-            <p className="track--title">{props.title}</p>
-            <p className="track--details">{props.artist}</p>
-            <p className="track--details">{props.album}</p>
-            <button type="button" className="button">+</button>
+            <p className="title">{props.title}</p>
+            <p className="details">{props.artist}</p>
+            <p className="details">{props.album}</p>
+            <button onClick={ChangeButton} type="button" className="button">{buttonValue ? "+" : "-"}</button>
         </div>
     )
 }
