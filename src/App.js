@@ -10,7 +10,7 @@ import dataset from "./data.js"
 function App() {
   
   const newDataset = dataset.map(
-    item => ({...item, listType: "resultsList" })
+    item => ({...item, listType: "playList" })
   )
 
   
