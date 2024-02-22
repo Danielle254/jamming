@@ -9,8 +9,12 @@ import dataset from "./data.js"
 
 function App() {
   
+  const newDataset = dataset.map(
+    item => ({...item, listType: "resultsList" })
+  )
 
-  const [data, setData] = useState(dataset)
+  
+  const [data, setData] = useState(newDataset)
   
   function Shift(array) {
     const newArray = [...array]
@@ -31,7 +35,7 @@ function App() {
               title={track.name}
               artist={track.artist}
               album={track.album}
-              
+              listType={track.listType}
             />
             
         )
