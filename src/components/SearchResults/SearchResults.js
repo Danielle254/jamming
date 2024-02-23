@@ -9,9 +9,9 @@ export default function SearchResults() {
         <div>
             <header>
                 <h2>Search Results</h2>
-                {/* <Tracklist 
+                <Tracklist 
                 listType="resultsList"
-                /> */}
+                />
             </header>
             
         </div>
