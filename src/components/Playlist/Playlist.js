@@ -12,7 +12,7 @@ export default function Playlist(props) {
             <Tracklist 
             playlist={props.playlist}
             listType="playlist"
-            /*addToList={addToList} */
+            removeFromList={props.removeFromList}
             /> 
         </div>
     )

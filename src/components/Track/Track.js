@@ -8,16 +8,13 @@ export default function Track(props) {
         album: props.album,
         id: props.id
     }
-    const listType = props.listType
-    const buttonType = listType === "resultsList" ? "+" : "-"
-    /* const onClickFunction = props.listType === "resultsList" ? props.addToList(track) : props.removeFromList(track) */
-
+    
     return (
         <div className="track">
             <p className="title">{props.title}</p>
             <p className="details">{props.artist}</p>
             <p className="details">{props.album}</p>
-            <button /* onClick={() => props.setterFunction(track)} */ type="button" className="button">{props.buttonType}</button>
+            <button onClick={() => props.setterFunction(track)} type="button" className="button">{props.buttonType}</button>
         </div>
     )
 }

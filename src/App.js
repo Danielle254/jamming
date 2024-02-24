@@ -9,13 +9,15 @@ import dataset from "./data.js"
 
 function App() {
   const [results, setResults] = useState(dataset)
-  const [playlistData, setPlaylistData] = useState([{name: "Alcohol", 
-  artist: "X Ambassadors", 
-  album: "Alcohol", 
-  id: 3}])
+  const [playlistData, setPlaylistData] = useState([{
+    name: "Alcohol", 
+    artist: "X Ambassadors", 
+    album: "Alcohol", 
+    id: 3}])
     
-/*   function addToList(track) { 
-      setPlaylistData(prevPlaylistData => {
+
+  function addToList(track) {
+    setPlaylistData(prevPlaylistData => {
       const newPlaylistData = []
       const id = track.id
       if (prevPlaylistData.length > 0) {
@@ -30,9 +32,14 @@ function App() {
       } 
       else {
           newPlaylistData.push(track)
+          return newPlaylistData
       }
       })
-  } */
+  }
+
+  function removeFromList(track) {
+    
+  }
   
   return (
     <div className="App">
@@ -40,9 +47,11 @@ function App() {
       <div className="main">      
       <SearchResults 
       results={results}
+      addToList={addToList}
       />
       <Playlist 
       playlist={playlistData}
+      removeFromList={removeFromList}
       />
       </div>
       

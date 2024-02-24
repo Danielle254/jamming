@@ -14,6 +14,7 @@ export default function SearchResults(props) {
                 <Tracklist 
                 results={props.results}
                 listType="resultsList"
+                addToList={props.addToList}
                 /> 
             </header>
             
