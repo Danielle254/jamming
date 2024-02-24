@@ -4,32 +4,13 @@ import Track from "../Track/Track"
 
 export default function TrackList(props) {
   
-  const dataset = props.dataset
   
-  /* const [data, setData] = useState(dataset) */
-    
-  /* function changeList(id) { 
-    setData(prevData => {
-      const newData = []
-      for(let i = 0; i < prevData.length; i++) {
-        const currentItem = prevData[i]
-        if(currentItem.id === id) {
-          const updatedItem = {
-            ...currentItem,
-            playlist: !currentItem.playlist
-          }
-          newData.push(updatedItem)
-        } else {
-          newData.push(currentItem)
-        }
-      }
-      return newData
-    })
-
-  } */
-  
-
-  const tracks = dataset.map(
+  /* want to pass the appropriate function for Track to render based off of listType
+      addToList={props.addToList} 
+      removeFromList={props.removeFromList} 
+  const setterFunction = props.listType === "resultsList" ? props.addToList : props.removeFromList
+              */
+  const tracks = props.results.map(
           track => {
           
             return (
@@ -40,18 +21,15 @@ export default function TrackList(props) {
                 title={track.name}
                 artist={track.artist}
                 album={track.album}
-                buttonType={props.buttonType}
+                buttonType={props.listType === "resultsList" ? "+" : "-"}
+                /* setterFunction={setterFunction} */
                 
               />
-        
-              
+                      
                 )
            
             })
-      
-
-  
-
+   
   
   return (
     <div>

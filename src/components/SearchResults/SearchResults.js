@@ -1,21 +1,20 @@
 import React from "react"
 import Tracklist from "../Tracklist/Tracklist"
-import dataset from "../../data.js"
 
 
 
-export default function SearchResults() {
+export default function SearchResults(props) {
     
     
     return (
         <div>
             <header>
                 <h2>Search Results</h2>
-                <Tracklist 
                 
-                dataset={dataset}
-                buttonType="+"
-                />
+                <Tracklist 
+                results={props.results}
+                listType="resultsList"
+                /> 
             </header>
             
         </div>
