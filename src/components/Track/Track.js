@@ -8,7 +8,8 @@ export default function Track(props) {
             <p className="title">{props.title}</p>
             <p className="details">{props.artist}</p>
             <p className="details">{props.album}</p>
-            <button onClick={props.ChangeList} type="button" className="button">{props.buttonType}</button>
+            <p>{props.playlist ? "true" : "false"}</p>
+            <button onClick={() => props.changeList(props.id)} type="button" className="button">{props.buttonType}</button>
         </div>
     )
 }
