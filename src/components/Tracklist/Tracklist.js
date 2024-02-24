@@ -3,14 +3,15 @@ import Track from "../Track/Track"
 
 
 export default function TrackList(props) {
-  
+  const listType = props.listType
+  const list = listType === "resultsList" ? props.results : props.playlist
   
   /* want to pass the appropriate function for Track to render based off of listType
       addToList={props.addToList} 
       removeFromList={props.removeFromList} 
   const setterFunction = props.listType === "resultsList" ? props.addToList : props.removeFromList
               */
-  const tracks = props.results.map(
+  const tracks = list.map(
           track => {
           
             return (
