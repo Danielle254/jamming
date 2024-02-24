@@ -28,31 +28,7 @@ export default function TrackList(props) {
 
   } */
   
-/*   let customPlaylist = data.filter(item => item.playlist === true)
 
-  
-  const playlistToDisplay = customPlaylist.map(
-      track => {
-        
-        return (
-              
-          <Track
-            key={track.id}
-            id={track.id}
-            title={track.name}
-            artist={track.artist}
-            album={track.album}
-            playlist={track.playlist}
-            buttonType="-"
-            changeList={changeList}
-          />
-    
-          
-            )
-       
-        }) */
-    
-      
   const tracks = dataset.map(
           track => {
           
@@ -82,15 +58,4 @@ export default function TrackList(props) {
       {tracks}
     </div>
   )}
- /*  if (listToRender === "playlist") {
-    return (
-        <div>
-          {playlistToDisplay}
-        </div>
-    ) } else {
-      return (
-        <div>
-          {results}
-        </div>
-    ) }
-    } */
+

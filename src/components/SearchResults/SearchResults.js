@@ -12,7 +12,7 @@ export default function SearchResults() {
             <header>
                 <h2>Search Results</h2>
                 <Tracklist 
-                listType="resultsList"
+                
                 dataset={dataset}
                 buttonType="+"
                 />
