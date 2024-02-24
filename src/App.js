@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import './App.css';
 import SearchBar from "./components/SearchBar/SearchBar"
 import SearchResults from "./components/SearchResults/SearchResults"
@@ -15,7 +15,7 @@ function App() {
       <SearchBar />
       <div className="main">
       <SearchResults />
-      <Playlist />
+      {/* <Playlist /> */}
       </div>
       
     </div>

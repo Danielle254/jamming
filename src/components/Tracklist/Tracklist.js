@@ -1,20 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
 import Track from "../Track/Track"
-import dataset from "../../data.js"
 
-const newDataset = dataset.map(
-  each => ({
-    ...each,
-    playlist: false
-  })
-)
 
 export default function TrackList(props) {
-  const listToRender = props.listType
   
-  const [data, setData] = useState(newDataset)
+  const dataset = props.dataset
+  
+  /* const [data, setData] = useState(dataset) */
     
-  function changeList(id) { 
+  /* function changeList(id) { 
     setData(prevData => {
       const newData = []
       for(let i = 0; i < prevData.length; i++) {
@@ -32,9 +26,9 @@ export default function TrackList(props) {
       return newData
     })
 
-  }
+  } */
   
-  let customPlaylist = data.filter(item => item.playlist === true)
+/*   let customPlaylist = data.filter(item => item.playlist === true)
 
   
   const playlistToDisplay = customPlaylist.map(
@@ -56,10 +50,10 @@ export default function TrackList(props) {
           
             )
        
-        })
+        }) */
     
       
-  const results = data.map(
+  const tracks = dataset.map(
           track => {
           
             return (
@@ -70,9 +64,8 @@ export default function TrackList(props) {
                 title={track.name}
                 artist={track.artist}
                 album={track.album}
-                playlist={track.playlist}
-                buttonType="+"
-                changeList={changeList}
+                buttonType={props.buttonType}
+                
               />
         
               
@@ -84,8 +77,12 @@ export default function TrackList(props) {
   
 
   
-  
-  if (listToRender === "playlist") {
+  return (
+    <div>
+      {tracks}
+    </div>
+  )}
+ /*  if (listToRender === "playlist") {
     return (
         <div>
           {playlistToDisplay}
@@ -96,4 +93,4 @@ export default function TrackList(props) {
           {results}
         </div>
     ) }
-    }
+    } */

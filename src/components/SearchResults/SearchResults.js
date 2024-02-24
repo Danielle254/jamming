@@ -1,5 +1,7 @@
 import React from "react"
 import Tracklist from "../Tracklist/Tracklist"
+import dataset from "../../data.js"
+
 
 
 export default function SearchResults() {
@@ -11,6 +13,8 @@ export default function SearchResults() {
                 <h2>Search Results</h2>
                 <Tracklist 
                 listType="resultsList"
+                dataset={dataset}
+                buttonType="+"
                 />
             </header>
             
