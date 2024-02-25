@@ -24,11 +24,8 @@ function App() {
         const contains = prevPlaylistData.every(
           item => item.id != id
         )
-        if (contains) {
-          return [...prevPlaylistData, track]
-          
-        } else {
-          return prevPlaylistData }}
+        return contains ? [...prevPlaylistData, track] :  prevPlaylistData
+        }
     }
     )
       } 
