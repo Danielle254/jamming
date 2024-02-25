@@ -16,20 +16,19 @@ function App() {
     setPlaylistData(prevPlaylistData => {
       const newPlaylistData = []
       const id = track.id
-      let contains = false
+      
       if (prevPlaylistData.length == 0) {
         newPlaylistData.push(track)
         return newPlaylistData  
       } else {
-        for (let i = 0; i < prevPlaylistData.length; i++) {
-          if (prevPlaylistData[i].id == id) {
-            contains = true
-          }
-        }
+        const contains = prevPlaylistData.every(
+          item => item.id != id
+        )
         if (contains) {
-          return prevPlaylistData
+          return [...prevPlaylistData, track]
+          
         } else {
-          return [...prevPlaylistData, track] }}
+          return prevPlaylistData }}
     }
     )
       } 
