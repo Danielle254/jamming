@@ -9,33 +9,32 @@ import dataset from "./data.js"
 
 function App() {
   const [results, setResults] = useState(dataset)
-  const [playlistData, setPlaylistData] = useState([{
-    name: "Alcohol", 
-    artist: "X Ambassadors", 
-    album: "Alcohol", 
-    id: 3}])
+  const [playlistData, setPlaylistData] = useState([])
     
 
   function addToList(track) {
     setPlaylistData(prevPlaylistData => {
       const newPlaylistData = []
       const id = track.id
-      if (prevPlaylistData.length > 0) {
-          for(let i = 0; i < prevPlaylistData.length; i++) {
-              const currentItem = prevPlaylistData[i]
-              if(currentItem.id != id) {
-              
-              newPlaylistData.push(track)
-              } 
+      let contains = false
+      if (prevPlaylistData.length == 0) {
+        newPlaylistData.push(track)
+        return newPlaylistData  
+      } else {
+        for (let i = 0; i < prevPlaylistData.length; i++) {
+          if (prevPlaylistData[i].id == id) {
+            contains = true
           }
-          return newPlaylistData
+        }
+        if (contains) {
+          return prevPlaylistData
+        } else {
+          return [...prevPlaylistData, track] }}
+    }
+    )
       } 
-      else {
-          newPlaylistData.push(track)
-          return newPlaylistData
-      }
-      })
-  }
+      
+ 
 
   function removeFromList(track) {
     
