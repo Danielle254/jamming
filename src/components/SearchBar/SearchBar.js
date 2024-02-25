@@ -1,10 +1,11 @@
 import React from "react"
+import "./SearchBar.css"
 
 export default function SearchBar() {
     return (
-        <div>
-            <input type="text" />
-            <button type="button" className="button">Search</button>
+        <div className="searchbar">
+            <input className="search--input" type="text" />
+            <button type="button" className="search--button">Search</button>
         </div>
     )
 }

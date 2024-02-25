@@ -1,6 +1,6 @@
 import React from "react"
 import Tracklist from "../Tracklist/Tracklist"
-
+import "./SearchResults.css"
 
 
 export default function SearchResults(props) {
