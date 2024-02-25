@@ -33,7 +33,14 @@ function App() {
  
 
   function removeFromList(track) {
-    
+    setPlaylistData(prevPlaylistData => {
+      
+      const newPlaylistData = prevPlaylistData.filter(
+          item => item.id != track.id
+        )
+        return newPlaylistData
+        }
+    )
   }
   
   return (
