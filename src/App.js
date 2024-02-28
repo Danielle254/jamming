@@ -10,6 +10,7 @@ import dataset from "./data.js"
 function App() {
   const [results, setResults] = useState(dataset)
   const [playlistData, setPlaylistData] = useState([])
+  const [playlistTitle, setPlaylistTitle] = useState("")
     
 
   function addToList(track) {
@@ -42,6 +43,10 @@ function App() {
         }
     )
   }
+
+  function handleTitle(event) {
+    setPlaylistTitle(event.target.value)
+  }
   
   return (
     <div className="App">
@@ -54,6 +59,8 @@ function App() {
       <Playlist 
       playlist={playlistData}
       removeFromList={removeFromList}
+      playlistTitle={playlistTitle}
+      handleTitle={handleTitle}
       />
       </div>
       
