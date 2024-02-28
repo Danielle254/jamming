@@ -11,6 +11,7 @@ export default function Playlist(props) {
             <input 
                 className="playlist--input"
                 onChange={props.handleTitle} 
+                value={props.playlistTitle}
                 type="text" 
                 placeholder="Title Your New Playlist" />            
             <button 
