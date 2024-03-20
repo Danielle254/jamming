@@ -18,8 +18,10 @@
 }
 
 .track--button {
-    background-color: rgb(23, 169, 169);
-    border-radius: 0.25rem;
+    background-color: rgb(112, 13, 112);
+    border-radius: .25rem;
     font-weight: bold;
+    color: white;
+    width: 25%;
 }
 

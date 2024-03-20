@@ -8,6 +8,7 @@ export default function SearchBar() {
     function updateSearch(event) {
         setSearch(event.target.value);
     }
+
     return (
         <div className="searchbar">
             <input 
@@ -17,7 +18,7 @@ export default function SearchBar() {
             value={search} />
             <button 
             type="button" 
-            className="search--button">Search</button>
+            className="search--button">Search Spotify</button>
         </div>
     )
 }
