@@ -12,8 +12,7 @@ export default function Track(props) {
     return (
         <div className="track">
             <p className="title">{props.title}</p>
-            <p className="details">{props.artist} | {props.album}</p>
-            
+            <p className="details">{props.artist} | {props.album}</p>            
             <button onClick={() => props.setterFunction(track)} type="button" className="track--button">{props.buttonType}</button>
         </div>
     )
