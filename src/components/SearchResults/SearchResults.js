@@ -9,8 +9,8 @@ export default function SearchResults(props) {
     return (
         <div>
             <header>
-                <h2>Search Results</h2>
-                
+                <h2>Step 3: Add Songs to Your New Playlist</h2>
+                <h3>Search Results</h3>
                 <Tracklist 
                 results={props.results}
                 listType="resultsList"

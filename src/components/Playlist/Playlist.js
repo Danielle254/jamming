@@ -1,21 +1,17 @@
-import React, { useState } from "react"
+import React from "react"
 import Tracklist from "../Tracklist/Tracklist"
 import "./Playlist.css"
 
 export default function Playlist(props) {
-    const [uriData, setUriData] = useState([
-        "1xFKRN7Dx8KP8zdg7zs7XN",
-        "0P9wLFurlgumLXuqFEpw52",
-        "4nMUPQeTor23d8RxiiJO9W"
-    ])
+    
 
-    function handleSubmit(event) {
+    /* function handleSubmit(event) {
 
-    }
+    } */
 
     return (
         <div className="playlist">
-            <h2>Custom Playlist</h2>
+            <h2>Step 4: Save Your New Playlist</h2>
             <input 
                 className="playlist--input"
                 onChange={props.handleTitle} 
@@ -25,7 +21,7 @@ export default function Playlist(props) {
             <button 
                 type="submit" 
                 className="playlist--button"
-                onChange={handleSubmit}
+                /* onChange={handleSubmit} */
                 >Save to Spotify</button>
             
             <Tracklist 

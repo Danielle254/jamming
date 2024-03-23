@@ -18,7 +18,8 @@ export default function TrackList(props) {
               <Track
                 key={track.id}
                 id={track.id}
-                title={track.title}
+                uri={track.uri}
+                name={track.name}
                 artist={track.artist}
                 album={track.album}
                 buttonType={buttonType}

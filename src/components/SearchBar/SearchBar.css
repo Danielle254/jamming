@@ -8,6 +8,7 @@
 .search--input {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 0.5rem;
+    width: 50%;
 }
 
 .search--button {
@@ -15,4 +16,5 @@
     font-weight: bold;
     background-color: rgb(192, 104, 192);
     border-radius: .25rem;
+    width: 50%;
 }
